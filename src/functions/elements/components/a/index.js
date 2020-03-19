@@ -18,6 +18,8 @@ function ATag () {
                 <a download="/文件名" href={pic}>下载文件</a>
                 <div>下载blob</div>
                 <a download="blob文件" href={blobUrl}>下载文件</a>
+                <div>a标签的target属性</div>
+                <a href="www.baidu.com"></a>
             </div>
         </div>
     )
