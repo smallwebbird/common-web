@@ -1,0 +1,26 @@
+.color-select {
+    position: relative;
+    height: 30px;
+    width: 120px;
+    &-preview {
+        height: 30;
+        border: 2px solid gray;
+    }
+    &-selects {
+        position: absolute;
+        left: 0;
+        bottom: -34px;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        &-item {
+            width: 20px;
+            height: 20px;
+            box-shadow: 3px red;
+        }
+        &-active {
+            border: 1px solid gray;
+        }
+    }
+}

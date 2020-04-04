@@ -1,0 +1,25 @@
+.button {
+    &-disabled:disabled {
+        width: 200px;
+        height: 100px;
+        color: white;
+        background: black;
+        outline: none;
+        border: none;
+    }
+    &-btn {
+        outline: none;
+        &:hover {
+            color: red;
+        }
+        // 聚焦后的样式
+        &:focus {
+            background: red;
+            color: white;
+        }
+        // 激活时的样式
+        &:active {
+            background: blue;
+        }
+    }
+} 

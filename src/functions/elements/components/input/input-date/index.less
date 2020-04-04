@@ -1,0 +1,39 @@
+.input {
+    &-date {
+        border: 1px solid red;
+    }
+    &-calendar {
+        &-days {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 420px;
+        }
+        &-week {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 420px;
+        }
+    }
+    &-days {
+        &-item {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            &-thisMonth {
+                background: #ccc9c9;
+            }
+            &-selected {
+                background: #95ddf3;
+            }
+        }
+    }
+    &-week {
+        &-item {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}

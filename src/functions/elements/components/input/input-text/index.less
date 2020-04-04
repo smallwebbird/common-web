@@ -1,0 +1,21 @@
+.input {
+    &-text {
+        padding: 30px;
+        border: 1px solid red;
+        input:disabled { 
+            background: red;
+        }
+        input:read-only {
+            background: gray;
+        }
+        &-datalist {
+            width: 200px;
+        }
+        &-list {
+            width: 200px;
+            option {
+                background: white;
+            }
+        }
+    }
+}
