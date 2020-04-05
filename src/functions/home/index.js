@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react';
-import { useRouteMatch } from 'react-router-dom';
+import { useRouteMatch, useHistory } from 'react-router-dom';
 
 function Home () { 
-    let match = useRouteMatch() 
-    console.log(match)
-    useEffect(() => {
-    })
+    let history = useHistory()
+    const toElement = () => {
+        history.push('/elements')
+    }
     return (
-        <div>this is home</div>
+        <div>
+            <button onClick={toElement}>元素</button>
+        </div>
     )
 }
 
