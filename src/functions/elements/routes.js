@@ -2,7 +2,7 @@ export default [{
   path: '/a',
   name: 'a标签'
 }, {
-  path: '/vedio',
+  path: '/video',
   name: '视频标签'
 }, {
   path: '/article',
@@ -16,4 +16,16 @@ export default [{
 }, {
   path: '/input',
   name: '输入框'
+}, {
+  path: '/textarea',
+  name: '多行输入框'
+}, {
+  path: '/form',
+  name: '表单'
+}, {
+  path: '/iframe',
+  name: 'iframe'
+}, {
+  path: '/nav',
+  name: '面包屑'
 }];

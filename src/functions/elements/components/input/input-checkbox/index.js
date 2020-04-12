@@ -11,7 +11,6 @@ export default function InputCheckBox () {
     }
     const changeCheckbox = function(e) {
         let value = e.target.value;
-        let checked = e.target.checked;
         if (form.checkbox.includes(value)) {
             let index = form.checkbox.indexOf(value);
             form.checkbox.splice(index, 1);

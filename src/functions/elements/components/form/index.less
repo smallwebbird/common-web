@@ -1,0 +1,47 @@
+.form {
+    position: relative;
+    input:focus {
+        outline: none;
+    }
+    input:invalid {
+        border-color: red;
+    }
+    input:valid {
+        border-color: black;
+    }
+    &-error {
+        display: none;
+        background: red;
+        color: white;
+        width: 200px;
+        height: 50px;
+    }
+    &-dialog {
+        border: none;
+        // 定义背景颜色
+        &::backdrop {
+            background: rgba(0,0, 0, 0.5);
+        }
+    }
+    &-back {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.5);
+        & > div {
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: red;
+        }
+        &-visible {
+            display: none;
+        }
+    }
+}

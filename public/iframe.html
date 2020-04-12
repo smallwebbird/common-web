@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe教程</title>
+    <style>
+        body {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    iframe
+    <button id="btn">退出全屏</button>
+    <div>
+        <!--是否允许提交表单-->
+        <form action="/" method="POST">
+            <label>姓名:</label>
+            <input type="text" />
+            <input type="submit" />
+        </form>
+    </div>
+    <script>
+        window.sonValue = "hello father"
+        window.onload = function () {
+            let btn = document.querySelector("#btn")
+            btn.addEventListener('click', function () {
+                if (window.parent.document.fullscreenElement) {
+                    // 因为是父元素进入全局模式，所以说需要拿父context的document
+                    window.parent.document.exitFullscreen()
+                }
+            }, false)
+        }
+    </script>
+</body>
+</html>
