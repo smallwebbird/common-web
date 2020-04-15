@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useRouteMatch, Route, useHistory } from 'react-router-dom';
 import ElementList from './components/elementList';
-import { ATag, Article, Video, Button, Test, Input, Textarea, Form, Iframe, Nav } from './components';
+import { ATag, Article, Video, Button, Test, Input, Textarea, Form, Iframe, Nav, ObjectElement, ImageElement } from './components';
 
 function Elements() {
   let match = useRouteMatch();
@@ -19,6 +19,8 @@ function Elements() {
                 <Route path="/elements/form"><Form /></Route>
                 <Route path="/elements/iframe"><Iframe /></Route>
                 <Route path="/elements/nav"><Nav /></Route>
+                <Route path="/elements/object"><ObjectElement /></Route>
+                <Route path="/elements/image"><ImageElement /></Route>
   </div>;
 }
 

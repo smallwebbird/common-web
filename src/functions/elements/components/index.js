@@ -8,4 +8,6 @@ import Textarea from './textarea';
 import Form from './form';
 import Iframe from './iframe';
 import Nav from './nav';
-export { Video, ATag, Article, Button, Test, Input, Textarea, Form, Iframe, Nav };
+import ObjectElement from './object';
+import ImageElement from './image';
+export { Video, ATag, Article, Button, Test, Input, Textarea, Form, Iframe, Nav, ObjectElement, ImageElement };

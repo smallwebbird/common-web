@@ -28,4 +28,10 @@ export default [{
 }, {
   path: '/nav',
   name: '面包屑'
+}, {
+  path: '/object',
+  name: '嵌入对象元素'
+}, {
+  path: '/image',
+  name: '图像'
 }];

@@ -72,6 +72,13 @@ function Video () {
                 <source src={movie} type="video/mp4"/>
                 浏览器不支持
             </video>
+            {/* 好像现在浏览器都不支持这个标签 */}
+            <embed type="video/quicktime" src={movie} width="640" height="480" />
+            <object type="video/mp4"
+                data={movie}
+                width="640" 
+                height="480">
+            </object>
         </div>
     )
 }
