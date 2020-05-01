@@ -39,6 +39,7 @@ export default function IframeStudy () {
             </div>
             {/* sandbox中可以指定一些iframe中允许的操作， 如果没有指定sandbox属性，那么默认在iframe中都允许 */}
             <iframe sandbox="" ref={iframeRef} id={`${prefixCls}-iframe`} className={`${prefixCls}-full`}  src="http://localhost:3000/iframe.html" width="300" height="300"></iframe>
+
         </div>
     )
 }

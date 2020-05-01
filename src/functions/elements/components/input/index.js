@@ -5,6 +5,7 @@ import InputFile from './input-file';
 import InputDate from './input-date';
 import InputCheckbox from './input-checkbox';
 import InputRange from './input-range';
+import InputClass from './input-class';
 
 import './index.less';
 
@@ -18,6 +19,7 @@ function Input () {
             <InputDate />
             <InputCheckbox />
             <InputRange />
+            <InputClass />
             <div>笔记</div>
             <div>
                 数字键盘在客户端的表现：android下不管是input 中的type是number还是tel都会弹出相应的九宫格数字，但是在ios下，type为number时弹出的不是

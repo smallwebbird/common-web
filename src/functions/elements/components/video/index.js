@@ -74,6 +74,7 @@ function Video () {
             </video>
             {/* 好像现在浏览器都不支持这个标签 */}
             <embed type="video/quicktime" src={movie} width="640" height="480" />
+            {/* object 也可以引用外部资源， 嵌入对象元素 */}
             <object type="video/mp4"
                 data={movie}
                 width="640" 

@@ -32,7 +32,7 @@ export default function InputColor () {
             var reader = new FileReader()
             reader.readAsText(file, 'utf8')
             reader.onloadend = function () {
-                
+
             }
         }
     }

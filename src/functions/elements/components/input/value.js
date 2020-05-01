@@ -4,5 +4,5 @@ export default [
         fieldExtra: {},
         defaultValue: "",
         required: true
-    }
+     }
 ]

@@ -1,0 +1,13 @@
+.input-class {
+
+}
+.input-class-placeholder-shown {
+
+}
+.input-class-placeholder-shown-input:placeholder-shown+.input-class-placeholder-shown-label {
+    visibility: hidden;
+}
+.input-class-placeholder-shown-input:not(:placeholder-shown)~.input-class-placeholder-shown-lable, 
+.input-class-placeholder-shown-input:focus:not(:placeholder-shown)~.input-class-placeholder-shown-label {
+    visibility: visible;
+}
