@@ -1,8 +1,9 @@
-import React, { useCallback, useState, useEffect } from 'react';
+import React, { useCallback, useState, useEffect, useRef } from 'react';
 
 export default function IndexDb () {
     const [ db, setDb ] = useState(null);
     const [ users, setUsers ] = useState([]);
+    const inputRef = useRef();
     useEffect(() => {
         initIndexDB('db')
             .then((res) => {
@@ -57,6 +58,18 @@ export default function IndexDb () {
             listUsers(db);
         }
     })
+    const searchResult = useCallback(() => {
+        let keyword = inputRef.current.value;
+        let objectStore = db.transaction(['users'], 'readwrite').objectStore('users');
+        let singleKeyRange = IDBKeyRange.only(keyword);
+        let index = objectStore.index('name');
+        index.openCursor(singleKeyRange).onsuccess = function (e) {
+            let cursor = e.target.result;
+            if (cursor) {
+                console.log(cursor.value);
+            }
+        }
+    })
     const editData = useCallback((u) => {
         let name = window.prompt('请输入更新后的名字', u.name);
         if (name !== null && name !== '') {
@@ -95,6 +108,12 @@ export default function IndexDb () {
                         })
                     }
                 </ul>
+            </div>
+            <div>
+                <div>
+                    <input placeholder="请输入要搜索的名字" ref={inputRef}/>
+                    <button onClick={searchResult}>搜索</button>
+                </div>
             </div>
         </div>
     )
